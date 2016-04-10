@@ -1,5 +1,5 @@
 # Author: Saurav Keshari Aryal
-# CSCI  Intro to Machine Learning
+# CSCI 675 Intro to Machine Learning
 # Instructor: Dr. Mugizi Robert Rwebangira
 # Logistic Regression with Gradient Descent
 # Demonstration
