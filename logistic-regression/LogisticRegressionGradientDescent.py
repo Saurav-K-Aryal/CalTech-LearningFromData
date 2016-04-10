@@ -1,6 +1,6 @@
-__author__ = 'graham'
-# Graham Traines
-# CSCI 7090 Machine Learning
+# Author: Saurav Keshari Aryal
+# CSCI  Intro to Machine Learning
+# Instructor: Dr. Mugizi Robert Rwebangira
 # Logistic Regression with Gradient Descent
 # Demonstration
 
@@ -9,7 +9,7 @@ import scipy as sp
 import matplotlib.pyplot as mpl
 
 """
-GO TO THE BOTTOM OF THE SCRIPT TO FIND THE START
+The functions are called at the botton of the file 
 """
 
 # method:
@@ -266,29 +266,26 @@ def learn_class(data_set_file_location, data_column, column_name, target_column,
     return
 
 '''
-!!!!!!!!!!!!!!!!!!
-!!! START HERE !!!
-!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!! Function Calls Below !!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 '''
 # little_epsilon: tolerable in-sample error
 # (not currently being used, the error never seems to reach low enough)
 little_epsilon = 0.1
-# eta: learning rate
+
+# eta: learning rate, alpha
 eta = 0.001
+
 # learning iterations
 iterations = 200
 
 # target data column: 1
 # input data column: 3
-#learn: P(Default|Balance)
+#learn: Does a Person default given a certain Balance
 learn_class("Credit_Data.csv", 3, 'Balance', 1, little_epsilon, eta, iterations)
 
 # target data column: 1
 # input data column: 4
-#learn: P(Default|Income)
+#learn: Does a Person default given a certain income (income * 1000) yielded better correlation.
 learn_class("Credit_Data.csv", 4, 'Income (* 1000)', 1, little_epsilon, eta, iterations)
-
-#demonstrate correct classification: P(D|B)
-#P(Default|Balance)
-#P(Default|Income)
-
